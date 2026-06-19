@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sissi!</title>
+<script data-goatcounter="https://steffenhuck.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amarante&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #23282b;          /* near-black, faintly cool */
+    --ground: #f3f4f2;       /* pale cool grey ground */
+    --accent: #2e4d47;       /* street-sign teal */
+    --muted: #6c7672;        /* muted grey-green for stage directions */
+    --rule: #d4d8d4;         /* hairline */
+    --measure: 38rem;        /* reading column */
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "EB Garamond", Georgia, serif;
+    font-size: 1.18rem;
+    line-height: 1.6;
+    padding: 4.5rem 1.25rem 6rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: var(--measure); margin: 0 auto; }
+
+  /* ---- Title block ---- */
+  .title {
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-size: clamp(3.1rem, 11vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-family: "Amarante", serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin: 0 0 2.6rem;
+  }
+
+  /* ---- Image (85%, centered, overture) ---- */
+  .plate {
+    width: 85%;
+    margin: 0 auto 2.8rem;
+    display: block;
+  }
+  .plate img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 600px) {
+    .plate { width: 100%; }
+  }
+
+  /* ---- Cast ---- */
+  .cast {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--ink);
+    margin: 0 0 3rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cast .cast-label {
+    font-family: "Amarante", serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 0.9rem;
+  }
+
+  /* ---- Speaker tags ---- */
+  .speaker {
+    font-family: "Amarante", serif;
+    font-size: 0.92rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 1.9rem 0 0.35rem;
+  }
+
+  /* ---- Speech ---- */
+  .speech {
+    margin: 0 0 0.2rem;
+  }
+
+  /* inline stage direction lives inside .speech; just italic + muted, no block behaviour */
+  .speech .dir {
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  /* ---- Block stage direction ----
+     no top margin: the gap above is governed by the preceding .speech / element's
+     bottom margin, so the two never stack. */
+  .stage {
+    font-style: italic;
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+    padding-left: 1.4rem;
+  }
+
+  /* opening stage direction sits right under the cast rule */
+  .stage.opening { margin-top: 0; }
+
+  /* a .speech immediately after a .stage wants a little air restored above its speaker */
+  .stage + .speaker { margin-top: 1.6rem; }
+
+  /* ---- Footer ---- */
+  .colophon {
+    margin-top: 4rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  .colophon a {
+    font-family: "Amarante", serif;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .colophon a:hover,
+  .colophon a:focus { text-decoration: underline; }
+
+  ::selection { background: #2e4d47; color: #f3f4f2; }
+</style>
+</head>
+<body>
+  <main class="page">
+
+    <h1 class="title">Sissi!</h1>
+    <p class="subtitle">A&nbsp;Play</p>
+
+    <figure class="plate">
+      <img src="beau-rivage.png"
+           alt="A Belle Époque grand hotel on a lakeside quay in Geneva, with a street sign reading Quai du Mont-Blanc in the foreground and a paddle steamer on the lake.">
+    </figure>
+
+    <p class="cast">
+      <span class="cast-label">Cast</span>
+      The Instructor · Sissi · The Other Students · The First Student<br>
+      The New Student · Napoleon · The Caretaker
+    </p>
+
+    <p class="stage opening">(A classroom at the Institute for the Advancement of Dictatorships. The tall window, the lake beyond it, flat and grey in the morning light. The far shore is just visible. The students sit at their desks. The Instructor stands at the front. Beside him, a girl in a simple white dress.)</p>
+
+    <p class="speaker">The Instructor</p>
+    <p class="speech">We have a new student. Please welcome her.</p>
+
+    <p class="stage">(He glances at her. She does not react.)</p>
+
+    <p class="speaker">The Instructor</p>
+    <p class="speech">Perhaps you would introduce yourself.</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">My name is Elisabeth, but everybody calls me Sissi. I'm seventeen.</p>
+
+    <p class="stage">(A beat.)</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">When I was sixteen, I became an empress. But that's a long time ago.</p>
+
+    <p class="speaker">The Other Students</p>
+    <p class="speech">An empress!</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">It was less fun than you might think.</p>
+
+    <p class="stage">(A beat.)</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">My hobbies are poetry and horse riding.</p>
+
+    <p class="speaker">The First Student</p>
+    <p class="speech"><span class="dir">(pointing at the New Student)</span> He has a beautiful mare.</p>
+
+    <p class="speaker">The New Student</p>
+    <p class="speech">She's called Veritata.</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">That's a beautiful name.</p>
+
+    <p class="speaker">The New Student</p>
+    <p class="speech">You can ride her anytime.</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">I'm looking forward to that.</p>
+
+    <p class="stage">(A knock on the door. Enter the Caretaker and Napoleon.)</p>
+
+    <p class="speaker">Napoleon</p>
+    <p class="speech">Sissi!</p>
+
+    <p class="stage">(Sissi curtsies.)</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">It's such an honour, Your Majesty.</p>
+
+    <p class="stage">(Napoleon takes a seat at the back of the room. The Caretaker leaves.)</p>
+
+    <p class="speaker">The New Student</p>
+    <p class="speech">Which country did you rule?</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">I didn't rule at all. That was my husband's job. But to answer your question, it was Austria and Hungary.</p>
+
+    <p class="stage">(A beat.)</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">And Bohemia, Dalmatia, Croatia, Slavonia, Galicia, Carinthia, Moravia… I forget the full list.</p>
+
+    <p class="speaker">The Other Students</p>
+    <p class="speech">Wow!</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">My last ever trip was to here. I stayed on the other shore.</p>
+
+    <p class="stage">(She turns to the window.)</p>
+
+    <p class="speaker">The First Student</p>
+    <p class="speech">You were stabbed there.</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">Yes, I was, wasn't I. The man was called Luigi.</p>
+
+    <p class="stage">(A beat.)</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">I still find that comical.</p>
+
+    <p class="stage">(She looks at the water.)</p>
+
+    <p class="speaker">Sissi</p>
+    <p class="speech">It was the tenth of September, 1898.</p>
+
+    <footer class="colophon">
+      <a href="https://steffenhuck.github.io/">steffen huck</a>
+    </footer>
+
+  </main>
+</body>
+</html>
